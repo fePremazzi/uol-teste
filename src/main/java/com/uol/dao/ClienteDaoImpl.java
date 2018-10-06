@@ -30,7 +30,11 @@ public class ClienteDaoImpl implements ClienteDao {
 		
 		
 	}
-	
+
+	@Override
+	public void deleteCliente(Long id) {
+		clienterepo.deleteById(id);		
+	}
 
 
 }

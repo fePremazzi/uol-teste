@@ -12,5 +12,6 @@ public interface ClienteDao {
 	
 	Iterable<Cliente> listAllClientes();
 	void addCliente(Cliente cliente);
+	void deleteCliente(Long id);
 
 }
