@@ -6,8 +6,6 @@ import org.springframework.stereotype.Component;
 
 import com.uol.entities.Cliente;
 
-@Scope(value = "singleton")
-@Component
 public interface ClienteDao {
 	
 	Iterable<Cliente> listAllClientes();
