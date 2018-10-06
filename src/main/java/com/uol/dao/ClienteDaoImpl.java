@@ -10,7 +10,7 @@ import com.uol.repository.ClienteRepository;
 
 @Scope(value = "singleton")
 @Component
-public class ClienteDaoImpl implements ClienteDao {
+public class ClienteDaoImpl implements ClienteDAO {
 	
 	@Autowired
 	private ClienteRepository clienterepo;

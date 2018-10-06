@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.uol.dao.ClienteDao;
+import com.uol.dao.ClienteDAO;
 import com.uol.entities.Cliente;
 
 @RestController
@@ -17,7 +17,7 @@ import com.uol.entities.Cliente;
 public class ClienteController {
 	
 	@Autowired
-	private ClienteDao clientes;
+	private ClienteDAO clientes;
 	
 	@GetMapping("/all")
 	public Iterable<Cliente> list(){
