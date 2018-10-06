@@ -1,11 +1,16 @@
 package com.uol.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import com.uol.entities.Cliente;
 import com.uol.repository.ClienteRepository;
 
-public class ClienteDaoImpl implements ClienteDAO {
+
+@Scope(value = "singleton")
+@Component
+public class ClienteDaoImpl implements ClienteDao {
 	
 	@Autowired
 	private ClienteRepository clienterepo;
