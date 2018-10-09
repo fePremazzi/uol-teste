@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Cliente {
@@ -15,7 +17,11 @@ public class Cliente {
 	private String nome;
 	private Integer idade;
 	
+	@OneToOne
+	@JoinColumn(name = "idTemp")
+	private Temperatura temp;
 	
+
 	public Long getId() {
 		return id;
 	}
