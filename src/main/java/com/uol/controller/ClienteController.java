@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.uol.dao.ClienteDAO;
 import com.uol.entities.Cliente;
+import com.uol.geolocaliza.TemperaturaAPI;
 
 @RestController
 @RequestMapping("/")
@@ -38,6 +39,7 @@ public class ClienteController {
 	@PostMapping("/add")
 	public String adicionarCliente(@RequestBody Cliente cl) {
 		try {
+			cl.setTemp(TemperaturaAPI.getMinMax());
 			clientes.addCliente(cl);		
 			return "Client added";
 		} catch (Exception e) {

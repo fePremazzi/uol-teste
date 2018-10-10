@@ -7,13 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.uol.geolocaliza.TemperaturaAPI;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class Application 
 {
     public static void main( String[] args ) throws IOException
     {
-        //SpringApplication.run(Application.class, args);
-    	System.out.println(TemperaturaAPI.getWoeid());
-    	
+        SpringApplication.run(Application.class, args);
+
+//    	System.out.println(TemperaturaAPI.getMinMax().getMax_temp());    	
     }
 }
