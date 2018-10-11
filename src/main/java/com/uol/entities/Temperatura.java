@@ -19,16 +19,7 @@ public class Temperatura {
 	private float tempMin;
 	private float tempMax;
 	
-	@OneToOne(mappedBy = "temp")
-	private Cliente cliente;
-	
-	
-	public Cliente getCliente() {
-		return cliente;
-	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}
+
 	public Long getIdTemp() {
 		return idTemp;
 	}

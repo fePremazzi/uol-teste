@@ -1,5 +1,6 @@
 package com.uol.entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +18,7 @@ public class Cliente {
 	private String nome;
 	private Integer idade;
 	
-	@OneToOne
+	@OneToOne(cascade= CascadeType.ALL)
 	@JoinColumn(name = "idTemp")
 	private Temperatura temp;
 	

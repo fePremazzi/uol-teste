@@ -28,7 +28,7 @@ public class TemperaturaAPI {
 		latLong = mapper.treeToValue(node, LatLong.class);
 	}
 	
-	//Metho to find based on the latitude and longitude to find which whats their Where On Earth ID (woeid) 
+	//Method to find based on the latitude and longitude to find which whats their Where On Earth ID (woeid) 
 	private static String findWoeid() throws IOException {
 		
 		StringBuffer content = httpGetRequest("https://www.metaweather.com/api/location/search/?lattlong="+latLong.getLatitude()+","+latLong.getLongitude());
